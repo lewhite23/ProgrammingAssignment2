@@ -1,5 +1,9 @@
 ### Programming Assignment 2
 
+
+# The following function will generate a matrix based on the argument input.
+# It will also store the inverse value should that value (in the cache) be calculated already and not equal to NULL.
+
 makeCacheMatrix <- function(x = matrix()){
         inverse <<- NULL
         
@@ -24,6 +28,10 @@ makeCacheMatrix <- function(x = matrix()){
 }
 
 # debug(makeCacheMatrix)
+
+# The next function will calculate the inverse of the matrix created by the first function.
+# Further, if the inverse of the matrix has already been calculated before and was stored on the cache then it will just 
+# retrieve the inverse value from the cache through the function above and skip the calculation.
 
 cacheSolve <-  function(x = matrix()){
         inverse <- x$getInverse()
